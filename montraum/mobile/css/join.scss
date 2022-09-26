@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+$color-primary:#000;
+$color-secondary:#555;
+$color-white:#fff;
+$color-gray:#888;
+$color-gray-bg:#F6F6F6;
+$color-menu-point:#800080;
+$color-text-point:#E5005A;
+
+.content{
+    .joinWrap{
+        >div{text-align: center; border-bottom: 1px solid $color-primary;
+            h2{font-size: 26px; font-weight: bold; margin-top: 70px;}
+            p{color: $color-secondary; margin: 5px 0 15px;}
+            button{width: 290px; height: 50px; background-color: $color-primary; color: $color-white; font-size: 15px; font-weight: bold; margin-bottom: 35px;}
+        }
+        .sns-join{border-bottom: none;
+            h2{margin-top: 30px;}
+            button{padding-left: 45px; margin-bottom: 15px; background-repeat: no-repeat; background-position: 45px center;}
+            .naver-btn{background-image: url(../img/sns_logo_naver.png); background-color: #1EC800;}
+            .kakao-btn{background-image: url(../img/sns_logo_kakao.png);background-color: #F9DF33;}
+            .face-btn{background-image: url(../img/sns_logo_facebook.png);background-color: #385898;}
+        }
+
+    }
+}

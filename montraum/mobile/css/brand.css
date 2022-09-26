@@ -1,0 +1,78 @@
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+.content h2 {
+  font-size: 28px;
+  text-align: center;
+  margin: 30px 0 20px;
+}
+.content .brand ul {
+  width: 100%;
+  text-align: center;
+}
+.content .brand ul .brand-item {
+  float: left;
+  width: 50%;
+  margin: -1px -1px 0 0;
+}
+.content .brand ul .brand-item a {
+  width: 170px;
+  height: 180px;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+}
+.content .brand ul .brand-item a .brand-item-text {
+  text-align: center;
+}
+.content .brand ul .brand-item a .brand-item-text-title {
+  font-size: 12px;
+}
+.content .brand ul .brand-item a .brand-item-text-des {
+  font-size: 10px;
+  color: #888;
+}
+.content .brand ul .brand-item a.active {
+  border-bottom: 1px solid #000;
+}
+.content .brand ul .brand-item a.active .active {
+  background-image: url(../img/blt_item_active.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -13px;
+  width: 100%;
+  height: 13px;
+  background-position: center;
+  height: 13px;
+}
+.content .brand ul .brand-item:nth-child(odd) a {
+  float: right;
+}
+.content .brand ul .brand-cont {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  display: none;
+  padding: 50px 0 30px;
+}
+.content .brand ul .brand-cont-list {
+  text-align: center;
+  position: relative;
+}
+.content .brand ul .brand-cont-list img.close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: -35px;
+  padding: 0;
+}
+.content .brand ul .brand-cont-list button {
+  width: 140px;
+  height: 40px;
+  font-size: 13px;
+  background-color: #000;
+  color: #fff;
+}/*# sourceMappingURL=brand.css.map */

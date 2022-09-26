@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+$color-primary:#000;
+$color-secondary:#555;
+$color-white:#fff;
+$color-gray:#888;
+$color-gray-bg:#F6F6F6;
+$color-menu-point:#800080;
+$color-text-point:#E5005A;
+
+.content{
+    h2{font-size: 28px; text-align: center; margin: 30px 0 20px;} 
+    .tabLogin{padding: 0 20px; box-sizing: border-box; width: 100%;
+        &-menu{display: flex; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; margin-bottom: 30px;
+            a{display: block; width: 195px; height: 40px; border: 1px solid #ccc; border-bottom: 1px solid $color-primary; color: $color-gray; text-align: center; line-height: 40px;
+            }
+            .left{margin-right: -1px;}
+            a.active{border: 1px solid $color-primary; border-bottom: none; color: $color-primary; z-index: 1;}
+        }
+        &-cont{
+            &-box{display: none;
+                form{text-align: center;
+                    .tabLogin-cont-info{text-align: left;
+                        label{ width: 80px; display: inline-block;}
+                        input{width: 250px; height: 35px; margin-bottom: 20px; border: 1px solid #ccc; box-sizing: border-box;
+                            &:focus{outline: 2px solid $color-primary; border: none; border-radius: 3px;}
+                        }    
+                    }
+                    button{width: 290px; height: 40px; background-color: $color-primary; font-weight: bold; color: $color-white; text-align: center; text-transform: uppercase;}
+                }
+                &.active{display: block;}
+            }
+        }
+        &-link{margin: 50px 0;
+            ul{display: flex;  display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; justify-content: center;
+                li{
+                    a{background:url(../img/blt_line.png) no-repeat right center; padding: 0 20px;}
+                    &:last-child a{background: none;}
+                }
+            }
+        }
+    }
+    .sns-join{border-bottom: 1px solid #ccc; text-align: center; padding-bottom: 30px;
+        button{padding-left: 45px; margin-bottom: 15px; background-repeat: no-repeat; background-position: 45px center; width: 290px; height: 50px; background-color: $color-primary; color: $color-white; font-size: 15px; font-weight: bold;}
+        .naver-btn{background-image: url(../img/sns_logo_naver.png); background-color: #1EC800;}
+        .kakao-btn{background-image: url(../img/sns_logo_kakao.png);background-color: #F9DF33;}
+        .face-btn{background-image: url(../img/sns_logo_facebook.png);background-color: #385898;}
+    }  
+    .page-event{padding:0 20px;
+        ul{
+            .page-event-list{display: flex; height: 110px; border-bottom: 1px dashed #ccc; align-items: center;
+                img{width: 80px; height: 80px;}
+                &-text{margin-left: 20px;
+                    &-title{font-size: 15px;}
+                    &-des{font-size: 10px; color: $color-gray; margin: 5px 0;}
+                    &-link{ font-size: 11px; color:$color-secondary; background: url(../img/blt_more.png) no-repeat right center/8px; padding-right: 15px;}
+                }
+                &:last-child{border-bottom: none;}
+            }
+        }
+    } 
+    .page-benefit{padding: 40px 0 0; background-color: $color-gray-bg; border-bottom: 1px solid #ccc;
+        h3{font-size: 17px; text-align: center; margin-bottom: 30px;}
+        ul{overflow: hidden;
+           .benefit-list{float: left; width: 50%; text-align: center; height: 175px; margin-bottom: 20px;
+                img{width: 90px; height: 90px;}
+                &-text{margin-top: 5px;
+                    &-title{font-weight: bold; font-size: 14px; line-height: 2.5;
+                        span{color: $color-text-point; font-size: 14px;}
+                    }
+                    &-des{font-size: 12px; color: $color-gray;}
+                }
+           } 
+        }
+    } 
+    .page-membership{text-align: center; padding:0 20px; box-sizing: border-box;
+        h3{font-size: 20px; margin-top: 40px; font-weight: bold;}
+        >p{font-size: 12px; color: $color-gray; margin: 5px 0;}
+        p.page-membership-des{text-align: right;}
+        .membership-table{border-top: 1px solid $color-primary;
+            ul{
+                .membership-list{
+                    &-title{display: flex; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; align-items: center; width: 100%; height: 80px; border-bottom: 1px solid #ccc; background: url(../img/blt_open.png) no-repeat right center;
+                        img{width: 56px; height: 56px;}
+                        .list-text{text-align: left; padding-left: 20px;
+                            &-name{font-size: 25px;}
+                            &-des{color: $color-secondary; font-size: 12px;}
+                        }
+                    }
+                    &-detail{ border-bottom: 1px solid #ccc; padding: 10px 0; display: none;
+                        .list-detail-box{display: flex; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; justify-content: space-between; padding: 5px 0;
+                            .name{text-align: left; font-size: 12px; font-weight: bold;}
+                            .des{text-align: right;
+                                p{font-size: 12px;
+                                    .hightlight{color: $color-text-point;}
+                                    span{font-size: 12px; color: $color-gray;}
+                                }
+                            }
+                        }
+                    }
+                    &.common-benefit{
+                        .membership-list-title{
+                            .list-text{
+                                &-name{font-weight: bold;}
+                            }
+                        }
+                    }
+                    &.active .membership-list-title{background: url(../img/blt_close.png) no-repeat right center;}
+                    &.active .membership-list-detail{display: block;}
+                }
+            }
+        }
+        .membership-notice{background-color: #F6F6F6; margin-top: 20px; text-align: left; padding: 15px; box-sizing: border-box;
+            h4{font-size: 14px; color: $color-secondary; line-height: 25px;}
+            &-text{
+                p{font-size: 11px; color: $color-secondary; padding: 2px 0;}
+            }
+        }
+    }
+}

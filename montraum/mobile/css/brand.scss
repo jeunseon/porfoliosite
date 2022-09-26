@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+$color-primary:#000;
+$color-secondary:#555;
+$color-white:#fff;
+$color-gray:#888;
+$color-gray-bg:#F6F6F6;
+$color-menu-point:#800080;
+$color-text-point:#E5005A;
+
+.content{width: 100%; overflow: hidden;
+    h2{font-size: 28px; text-align: center; margin: 30px 0 20px;}
+    .brand{
+        ul{width: 100%; text-align: center; 
+            .brand-item{ float: left; width: 50%; margin: -1px -1px 0 0;
+                a{width: 170px; height: 180px; display: block;border: 1px solid #ccc;box-sizing: border-box; position: relative;
+                    .brand-item-text{text-align: center;
+                        &-title{font-size: 12px;}
+                        &-des{font-size: 10px; color: $color-gray;}
+                    }
+                }
+                a.active{ border-bottom: 1px solid $color-primary;
+                    .active{background-image: url(../img/blt_item_active.png); background-repeat: no-repeat; position: absolute; bottom: -13px; width: 100%; height: 13px; background-position: center;
+                        height: 13px;}
+                }
+            }
+            .brand-item:nth-child(odd) a{float: right;}
+
+            .brand-cont{height: 100%; overflow: hidden; width: 100%;display: none; padding: 50px 0 30px; 
+                &-list{text-align: center; position: relative;
+                    img.close{width: 24px; height: 24px; position: absolute; right: 10px; top:-35px; padding: 0;}
+                    button{width: 140px; height: 40px; font-size: 13px; background-color:$color-primary; color: $color-white;}
+                }
+            }
+        }
+    }
+}
