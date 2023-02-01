@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+#home{width: 100%; height: 100vh;}
+#about{width: 100%; height: 100vh;}
+#skill{width: 100%; height: 100vh;}
+#portfolio{width: 100%; height: 100vh;}
+#contact{width: 100%; height: 100vh;}
+.section{position: relative;}
+.sectionTitle{font-family: 'Shrikhand', cursive; font-weight: bold; font-size: 100px;letter-spacing: 15px; text-transform: capitalize; color: rgb(76 109 150 / 60%); position: absolute; top: 120px; left: 150px; }
+.container{max-width: 1000px; width: 100%; margin: 0 auto;}
+
+/* home */
+.home{position: relative;   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);}
+.home .typeText{font-size: 100px; text-align: center; position: absolute; top: 45%; left: 50%; transform: translate(-50%,-50%);}
+.logo{ top: 10px; width: 150px; z-index: 2000;}
+.logo img{position: absolute; top: 0; left: 0;}
+.logo img.logo-rotate{animation: logoRo 10s linear infinite;transform-origin: 50% 50%;}
+.nav-pills .nav-link.active{background: #333;}
+@keyframes logoRo {
+  100%{transform: rotate(360deg);}
+}
+
+/* about */
+.about{background: url(../img/about-bg.png) no-repeat; background-size: cover;}
+.about .container{padding-top:16%;}
+.about .container .card img{height: 100%;}
+/* skill */
+.skill .container{padding-top: 18%;}
+.skillBar li{padding: 10px 0;}
+.skillBar li span{width: 200px; font-size: 20px;}
+.skillBar li .progress{height: 30px;}
+.skillIcon{margin-top: 8%;}
+.skillIcon li{text-align: center; float: left; width: 25%; margin-bottom: 30px;}
+.skillIcon li img{width: 30px; height: 30px;}
+.skillIcon li span{display: block; margin-top: 3px; text-transform: capitalize; font-weight: bold;}
+
+
+/* portfolio */
+.portfolio .port-slide{padding-top:28%; width: 100%;}
+.portfolio .port-slide .slide-item.pf1 img{background: url(../img/port-bg1.png) no-repeat;}
+.portfolio .port-slide .slide-item img{width: 630px; height: 470px;}
+.portfolio .port-slide .slide-item .slide-text{width: 500px; height: 400px; font-weight: bold; padding-top: 50px;}
+.portfolio .port-slide .slide-item .slide-text .mainTitle{font-size: 20px;}
+.portfolio .port-slide .slide-item .slide-text .title{font-size: 30px;}
+.portfolio .port-slide .slide-item .slide-text .des{font-size: 16px; padding-left: 0;}
+.portfolio .port-slide .slide-item .slide-text .des li{padding-right: 20px; color: rgb(107, 107, 107);}
+.portfolio .port-slide .slide-item .slide-text .demo-des{padding: 10px 0;}
+.portfolio .port-slide .slide-item .slide-text .demo-des span{width: 100px; display: inline-block;}
+.portfolio .port-slide .slide-item .slide-text .demo-des span:nth-child(2){width: 200px;}
+.portfolio .port-slide .slide-item .slide-text .btn-link a{display: block; width: 140px; height: 40px; border: 1px solid #425a73; border-radius: 5px; line-height: 40px; transition: .3s;}
+.portfolio .port-slide .slide-item .slide-text .btn-link a:hover{background: #425a73; color: #fff !important;}
+.port-slide .swiper-pagination{text-align: left; bottom: 58px; left: 130px;}
+.port-slide .swiper-button-next,.port-slide .swiper-button-prev{top: 90%; color: #333 !important;}
+.port-slide .swiper-button-next{right: 680px;}
+.port-slide .swiper-button-prev{left: 0;}
+.port-slide .swiper-button-next::after,.port-slide .swiper-button-prev::after{font-size: 20px;}
+
+/* contact */
+.contact{overflow: hidden;}
+.contact .container{ padding-top: 15%; max-width: 1200px;}
+.contact .container .dataWrap .clock{white-space: nowrap; font-size: 80px; }
+.contact .container .dataWrap .data{font-size: 20px; text-align: right;}
+.contact .container .footTitle{font-size: 120px;}
+.contact .container .sns-link a{margin: 0 30px;}
+.contact .container .sns-link a img{width: 50px; }
+.contact .container .sns-link a span{display: block; color: #000; text-transform: capitalize; font-weight: bold;}
+
+.contact .contactBg{height: 5%; width:100%; position:absolute; bottom:0; left:0;  background: #015871;}
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
+  .copy{ bottom: 30px; transform: translateX(-50%);}
+  .copy span{display: block; font-size: 13px; }
+
