@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* 공통 */
+*{font-family: "Montserrat", 'Noto Sans KR', arial;}
+a{text-decoration: none;}
+.fs-h2{ font-size: 48px; color:#2c3e50; line-height: 2.5rem;}
+.section-p{padding: 6rem 0;}
+.color-g{background-color: #1abc9c;}
+.color-b{background-color: #2c3e50;}
+.line .division-line{max-width: 12rem; width: 100%; height: 0.25rem;}
+.line i{font-size: 30px; color: #2c3e50;}
+.line i.white{color: #fff;}
+
+
+/* 네비게이션 */
+.navbar{background-color:#2c3e50; transition: .3s;}
+.navbar .navbar-nav li a{color: #fff;}
+.navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus{color:#e2fe88;}
+.navbar .navbar-nav li a.active{background-color: #e2fe88; color: #2c3e50 !important;}
+.navbar-scroll{
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+.navbar-toggler{border: 1px solid #fff;}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* header */
+.header{
+    padding-top: calc(6rem + 74px);
+    background-color: #1abc9c;
+    height: 100vh; 
+    box-sizing: border-box;
+}
+.header h1{font-size: 2rem;}
+@media screen and (max-width:576px) {
+    .margin-right{margin-right: 20px;}
+}
+
+/* portfolio */
+.port-menu{justify-content: flex-end;}
+.port-menu li{width: 100px; height: 26px; text-align: center; margin-left: 20px; background: #2c3e50;}
+.port-menu li a{font: bold 7px/26px 'Montserrat'; display: block; width: 100%; height: 100%; box-shadow: 0px 5px 20px rgba(0,0,0,.05); color: #fff; letter-spacing: 1px;}
+.port-menu li.on a{background: linear-gradient(45deg, #2fdeeb, #1abc9c); box-shadow: 0px 5px 20px rgba(76, 217, 215, 0.5);}
+.port-wrap{padding: 0; }
+.port-wrap::after{content: ''; display: block; clear: both;}
+.port-wrap .port-item{width: 20%; float: left; overflow: hidden; padding: 12px; box-sizing: border-box; transition: .8s;}
+.port-wrap .port-item:hover{transform: scale(1.1); position: relative; z-index: 10;}
+.port-wrap .port-item .port-inner{width: 100%; background: #fff; padding: 14px; box-shadow: 5px 5px 10px rgba(44, 62, 80, .5); cursor: pointer;}
+.port-wrap .port-item .port-inner img{ border: 1px solid rgba(44, 62, 80, .3); box-sizing: border-box; object-fit: cover; filter: saturate(0.2); }
+.port-wrap .port-item .port-inner:hover img{ filter: saturate(1);}
+.port-wrap .port-item .port-inner h2{font: bold 16px/1.2 "Noto Sans KR"; margin: 15px 0 7px; color: #444;}
+.port-wrap .port-item .port-inner .txt ul{font: 12px/1.5 "arial"; flex-wrap: wrap; margin-bottom: 15px;}
+.port-wrap .port-item .port-inner .txt ul li{margin:0 3px; color: #777;}
+.port-wrap .port-item .port-inner .txt p{display: none;}
+.port-wrap .port-item .port-inner .txt .gitBtn{display: none;}
+
+/* aside */
+.portfolio aside{width: 100%; height: 100vh; background: #333; position: fixed; top: 0; left: -100%; z-index: 1031; padding: 10vw; box-sizing: border-box; display: flex; justify-content: space-between; transition: .8s; opacity: 0;}
+.portfolio aside.on{opacity: 1; left: 0;}
+.portfolio aside .portBox{width: 45%; padding-top: 30px;}
+.portfolio aside .portBox h2{color: #ddd; font: normal 5vw/1 "Noto Sans KR"; margin-bottom: 30px;}
+.portfolio aside .portBox .txtBox{font: 18px/1.2 "arial"; color: #777;}
+.portfolio aside .portBox .txtBox ul{margin-bottom: 20px; flex-wrap: wrap;}
+.portfolio aside .portBox .txtBox ul li{margin-right: 15px;}
+.portfolio aside .portBox .txtBox p{font: 18px/2 "arial"; padding: 5px 0;}
+.portfolio aside .portBox .txtBox p span:nth-of-type(1){width: 100px; display: inline-block; position: relative;}
+.portfolio aside .portBox .txtBox p span:nth-of-type(1)::after{ content: ''; width: 1px; height: 20px; background: #777; position: absolute; top: 7px; right: 15px;}
+.portfolio aside .portBox .txtBox .gitBtn{margin-top: 30px;}
+.portfolio aside .portBox .txtBox .gitBtn a{border: 1px solid #fff; margin-right: 20px; box-sizing: border-box; transition: .5s;}
+.portfolio aside .portBox .txtBox .gitBtn a:hover{background: #1abc9c; border: 1px solid #1abc9c; }
+.portfolio aside .imgBox{width: 50%;}
+.portfolio aside .imgBox img{max-width: 400px; height: 100%; object-fit: contain;}
+
+.portfolio aside .btnClose{position: absolute; top: 100px; right: 5vw; font: 20px/1 "arial"; color: orange; cursor: pointer;}
+
+/* about */
+.int ul li{font-size:0.9rem; padding: 2px 0;}
+.int span{font-size:0.9rem;}
+/* skill */
+.skill .progress{height: 30px;}
+.skillbar li span{width: 200px;}
+.skill_icon li{width: 100px;}
+.skill_icon li img{width: 40px; margin:0 auto; padding-bottom: 5px;}
+.skill_icon li img.github-icon{width: 50px;}
+/* contact */
+
+.contact .sns i{font-size: 60px; color: #fff; height: 78px;}
+.contact .sns a img{width: 70px;}
+.copyrignt{background-color: #2c3e50;}
+
+/* @media screen */
+@media screen and (max-width:1200px) {
+    .port-wrap .port-item{width: 25%;}
+}
+@media screen and (max-width:992px) {
+    .port-menu{justify-content: center;}
+    .port-wrap .port-item{width: 50%;}
+    .portfolio aside{padding: 5vw;}
+    .portfolio aside .portBox{width: 30%; padding-top:15%;}
+    .portfolio aside .imgBox{width: 65%;}
+    .portfolio aside .imgBox img{max-width: 100%;}
+    .portfolio aside .btnClose{top: 10%;}
+}
+@media screen and (max-width:730px) {
+    .portfolio aside .portBox{width: 40%; padding-top:20%;}
+    .portfolio aside .imgBox{width: 55%;}
+}
+@media screen and (max-width:576px) {
+    .port-wrap .port-item{width: 100%; padding:5% 8%;}
+    .port-wrap .port-item .port-inner h2{font-size: 20px;}
+    .port-wrap .port-item .port-inner .txt ul{font-size: 15px;}
+    .portfolio aside{display: block;}
+    .portfolio aside .portBox{width:100%; padding-top: 5%;}
+    .portfolio aside .portBox h2{margin-bottom: 15px;}
+    .portfolio aside .portBox .txtBox ul{font-size: 15px; margin-bottom: 8px;}
+    .portfolio aside .portBox .txtBox p{font: 15px/1.2 "arial";}
+    .portfolio aside .portBox .txtBox p span:nth-of-type(1)::after{height: 18px; top: 0;}
+    .portfolio aside .portBox .txtBox .gitBtn{margin-top: 20px;}
+    .portfolio aside .imgBox{width:100%; margin-top: 20px;}
+    .portfolio aside .btnClose{top: 30px;}
+}
