@@ -51,12 +51,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // portfolio
+    // portfolio Isotope
     const grid = new Isotope(".port-wrap", {
         itemSelector: ".port-wrap>div",
         columWidth: ".port-wrap>div",
         transitionDuration: ".5s"
-    });
+    }); 
 
     const portBtns = document.querySelectorAll(".port-menu li");
     portBtns.forEach( portBtn => {
