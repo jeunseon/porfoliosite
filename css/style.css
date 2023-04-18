@@ -45,7 +45,7 @@ a{text-decoration: none;}
 .port-menu li.on a{background: linear-gradient(45deg, #2fdeeb, #1abc9c); box-shadow: 0px 5px 20px rgba(76, 217, 215, 0.5);}
 .port-wrap{padding: 0; }
 .port-wrap::after{content: ''; display: block; clear: both;}
-.port-wrap .port-item{width: 20%; float: left; overflow: hidden; padding: 12px; box-sizing: border-box; transition: .8s;}
+.port-wrap .port-item{width: 20%; float: left; overflow: hidden; padding: 12px; box-sizing: border-box; transition: .5s;}
 .port-wrap .port-item:hover{transform: scale(1.1); position: relative; z-index: 10;}
 .port-wrap .port-item .port-inner{width: 100%; background: #fff; padding: 14px; box-shadow: 5px 5px 10px rgba(44, 62, 80, .5); cursor: pointer;}
 .port-wrap .port-item .port-inner img{ border: 1px solid rgba(44, 62, 80, .3); box-sizing: border-box; object-fit: cover; filter: saturate(0.2); }

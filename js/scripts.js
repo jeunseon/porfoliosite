@@ -51,12 +51,20 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+
     // portfolio Isotope
-    const grid = new Isotope(".port-wrap", {
-        itemSelector: ".port-wrap>div",
-        columWidth: ".port-wrap>div",
-        transitionDuration: ".5s"
-    }); 
+    const grid = document.querySelector(".port-wrap");
+    let iso;
+
+    imagesLoaded(grid, function() {
+        iso = new Isotope( grid, {
+            itemSelector: ".port-wrap>div",
+            masonry:{
+                columWidth: ".port-wrap>div"
+            },
+            transitionDuration: ".5s"
+        });
+    });     
 
     const portBtns = document.querySelectorAll(".port-menu li");
     portBtns.forEach( portBtn => {
@@ -75,7 +83,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
         const portBtn_a = even.currentTarget.querySelector("a");
         const a_href = portBtn_a.getAttribute("href");
-        grid.arrange({filter: a_href});
+        iso.arrange({filter: a_href});
     }
 
     // aside
