@@ -10,7 +10,70 @@ a{text-decoration: none;}
 .line .division-line{max-width: 12rem; width: 100%; height: 0.25rem;}
 .line i{font-size: 30px; color: #2c3e50;}
 .line i.white{color: #fff;}
+/* loading */
+#loading{
+    width: 100%; 
+    height: 100vh;
+    position: fixed;
+    background: #fff;
+    transition: .8s linear;
+    opacity: 1;
+    z-index: 1040;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition-delay: .5s;
+}
+#loading img{
+    width: 500px;
+    object-fit: contain;
+    animation: loadImg 1s linear infinite;
+}
+#loading .load-txt{
+    opacity: 1; 
+    position: relative; 
+    font: normal 18px/1 'Noto Sans KR';
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+#loading p{
+    left: 50%;
+    transform: translateX(-50%);
+}
+#loading .loading-p1{
+    opacity: 1; 
+    animation: p1 3.5s; 
+    position: absolute;
+}
+#loading .loading-p2{
+    opacity: 0; 
+    animation: p2 3.5s; 
+    position: absolute;
+}
+@keyframes loadImg{
+    0%{transform: translateY(0); opacity: 1;}
+    50%{transform: translateY(30px); opacity: 0;}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+@keyframes p1{
+    0%{opacity: 1;}
+    50%{opacity: 1;}
+    100%{opacity: 0; display: none;}
+}
+@keyframes p2{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1; display: block;}
+}
 
+/* scroll spy */
+.back-to-position{transition: 1s; opacity: 0; transform: translateY(-100px);}
+.show .back-to-position{opacity: 1; transform: translateY(0);}
+.show .back-to-position.delay-0{transition-delay: .2s;}
+.show .back-to-position.delay-1{transition-delay: .5s;}
 
 /* 네비게이션 */
 .navbar{background-color:#2c3e50; transition: .3s;}
@@ -37,6 +100,7 @@ a{text-decoration: none;}
     .margin-right{margin-right: 20px;}
 }
 
+
 /* portfolio */
 .portfolio .portList::after{content: ''; display: block; clear: both;}
 .port-menu{justify-content: flex-end;}
@@ -47,7 +111,7 @@ a{text-decoration: none;}
 .port-wrap::after{content: ''; display: block; clear: both;}
 .port-wrap .port-item{width: 20%; float: left; overflow: hidden; padding: 12px; box-sizing: border-box; transition: .5s;}
 .port-wrap .port-item:hover{transform: scale(1.1); position: relative; z-index: 10;}
-.port-wrap .port-item .port-inner{width: 100%; background: #fff; padding: 14px; box-shadow: 5px 5px 10px rgba(44, 62, 80, .5); cursor: pointer;}
+.port-wrap .port-item .port-inner{width: 100%; display: block; background: #fff; padding: 14px; box-shadow: 5px 5px 10px rgba(44, 62, 80, .5); cursor: pointer;}
 .port-wrap .port-item .port-inner img{ border: 1px solid rgba(44, 62, 80, .3); box-sizing: border-box; object-fit: cover; filter: saturate(0.2); }
 .port-wrap .port-item .port-inner:hover img{ filter: saturate(1);}
 .port-wrap .port-item .port-inner h2{font: bold 16px/1.2 "Noto Sans KR"; margin: 15px 0 7px; color: #444;}

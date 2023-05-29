@@ -6,8 +6,18 @@
 //
 // Scripts
 // 
+const loader = document.querySelector('#loading');
+const html = document.querySelector('html');
 
 window.addEventListener('DOMContentLoaded', event => {
+    setTimeout(() => {
+        loader.style.opacity = '0'
+        html.style.overflow = 'auto';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 400);
+    }, 3000);
+
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -107,4 +117,19 @@ window.addEventListener('DOMContentLoaded', event => {
             aside.classList.remove('on');
         });
     });
+
+    // 순차적으로 나타나는 
+    const spyEls = document.querySelectorAll('.scroll-spy');
+    // section.scroll-spy 요소 모두 찾기
+    spyEls.forEach(function(spyEl){ // 각각의 요소 반복 실
+        new ScrollMagic
+            .Scene({ // Scene 로 특정 요소 감시
+                triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정. spyEls중 하나
+                triggerHook: .9, // 0~1 사이. 보여짐 위치(세로로 세)
+            })
+            .setClassToggle(spyEl, 'show')
+            .addTo(new ScrollMagic.Controller());
+            // setClassToggle 로 토글될 클래스 지정
+    });
+
 });

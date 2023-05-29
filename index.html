@@ -12,25 +12,34 @@
 	<meta name='Description' content='포트폴리오'>
 	<meta name='Author-Date' content='2023.03.15'>
 	<meta name='Robots' content='index,follow'>
-    <title>은선's portfolio</title>
+    <title>ESEON | 웹퍼블리셔 포트폴리오</title>
     <link rel="icon" href="./favicon.png" type="image/x-icon">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <!-- 구글폰트 -->
+    <!-- 구글폰트, 아이콘 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/84851ce5e5.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
+    <div id="loading">
+        <img src="./img/load.svg" alt="eseon 로딩 이미지">
+        <div class="load-txt">
+            <p class="loading-p1">웹 사이트 준비 중...</p>
+            <p class="loading-p2">만나서 반가워요!</p>
+        </div>
+    </div>
     <div id="wrap">
         <nav class="navbar navbar-expand-md text-uppercase fixed-top py-4" aria-label="navbar" id="mainNav">
             <div class="container">
@@ -48,28 +57,29 @@
                 </div>
             </div>
         </nav>
-        <header id="home" class="text-white text-center header color-g">
+        <header id="home" class="text-white text-center header color-g scroll-spy">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5 w-25" src="./img/women.png" alt="프로필 사진">
-                <h1 class="text-uppercase mb-0 fw-bold">EunSeon's Portfolio</h1>
-                <p class="mb-0 pt-3 fs-5">Web publisher - Frontend</p>
+                <img class="masthead-avatar mb-5 w-25 back-to-position" src="./img/women.png" alt="프로필 사진">
+                <h1 class="text-uppercase mb-0 fw-bold back-to-position delay-0">EunSeon's Portfolio</h1>
+                <p class="mb-0 pt-3 fs-5 back-to-position delay-1">Web publisher - Frontend</p>
             </div>
         </header>
-        <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="portfolio scroll-spy">
             <div class="container section-p">
-                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2">portfolio</h2>
+                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2 back-to-position">portfolio</h2>
                 <div class="line d-flex justify-content-center align-items-center my-4">
                     <div class="division-line color-b me-3"></div>
                     <i class="bi bi-flower2"></i>
                     <div class="division-line color-b ms-3"></div>
                 </div>
-                <div class="row portList">
+                <div class="row portList back-to-position delay-0">
                     <ul class="port-menu w-100 d-flex mb-3">
                         <li class="on"><a href="*">ALL</a></li>
                         <li><a href=".pc">PC</a></li>
                         <li><a href=".mobile">MOBILE</a></li>
                         <li><a href=".responsive">RESPONSIVE</a></li>
+                        <li><a href=".design">DESIGN</a></li>
                     </ul>
                     <div class="port-wrap">
                         <div class="pc port-item">
@@ -157,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pc responsive port-item">
+                        <!-- <div class="pc responsive port-item">
                             <div class="port-inner">
                                 <img src="./img/port-5.jpg" alt="십이간지 연애유형">
                                 <h2>십이간지 연애유형<br>클론코딩</h2>
@@ -179,7 +189,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="pc port-item">
                             <div class="port-inner">
                                 <img src="./img/port-6.jpg" alt="스타벅스">
@@ -264,6 +274,42 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="design port-item">
+                            <a href="./img/event.jpg" class="port-inner" target="_blank">
+                                <img src="./img/event.jpg" alt="코몽트 1+1 이벤트 배너">
+                                <h2>코몽트 1+1 이벤트 배너</h2>
+                            </a>
+                        </div>
+                        <div class="design port-item">
+                            <a href="./img/11_intro.jpg" class="port-inner" target="_blank">
+                                <img src="./img/11_intro.jpg" alt="11번가_intro">
+                                <h2>11번가 인트로 배너</h2>
+                            </a>
+                        </div>
+                        <div class="design port-item">
+                            <a href="./img/ns_fw_intro.jpg" class="port-inner" target="_blank">
+                                <img src="./img/ns_fw_intro.jpg" alt="ns_fw시즌_intro">
+                                <h2>NS fw시즌 인트로 배너</h2>
+                            </a>
+                        </div>
+                        <div class="design port-item">
+                            <a href="./img/shoping.jpg" class="port-inner" target="_blank">
+                                <img src="./img/shoping.jpg" alt="7월 쇼핑박스 배너">
+                                <h2>7월 쇼핑박스 배너</h2>
+                            </a>
+                        </div>
+                        <div class="design port-item">
+                            <a href="./img/st_intro.jpg" class="port-inner" target="_blank">
+                                <img src="./img/st_intro.jpg" alt="반팔 인트로 배너">
+                                <h2>코몽트 반팔 배너</h2>
+                            </a>
+                        </div>
+                        <div class="design port-item">
+                            <a href="./img/lotteon.jpg" class="port-inner" target="_blank">
+                                <img src="./img/lotteon.jpg" alt="코몽트 롯데온 배너">
+                                <h2>코몽트 롯데온 배너</h2>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -278,15 +324,15 @@
                 <span class="btnClose">close</span>
             </aside>
         </section>
-        <section id="about" class="about color-g">
+        <section id="about" class="about color-g scroll-spy">
             <div class="container section-p mb-0 text-white">
-                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2 text-white">about</h2>
+                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2 text-white back-to-position">about</h2>
                 <div class="line d-flex justify-content-center align-items-center my-4">
                     <div class="division-line me-3 bg-light"></div>
                     <i class="bi bi-flower2 white"></i>
                     <div class="division-line ms-3 bg-light"></div>
                 </div>
-                <div class="row int px-4">
+                <div class="row int px-4 back-to-position delay-0">
                     <div class="col-md-4 ms-auto">
                         <p class="lead py-1">정은선 ( Jeong Eun Seon )<br>
                             <span>1994.04.20</span></p>
@@ -309,15 +355,15 @@
                 </div>
             </div>
         </section>
-        <section id="skill" class="skill">
+        <section id="skill" class="skill scroll-spy">
             <div class="container section-p mb-0">
-                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2">skill</h2>
+                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2 back-to-position">skill</h2>
                 <div class="line d-flex justify-content-center align-items-center my-4">
                     <div class="division-line me-3 color-b"></div>
                     <i class="bi bi-flower2"></i>
                     <div class="division-line ms-3 color-b"></div>
                 </div>
-                <ul class="row skillbar col-lg-8 mx-auto">
+                <ul class="row skillbar col-lg-8 mx-auto back-to-position delay-0">
                     <li class="d-flex py-2">
                         <span class="fw-bold fs-5 text-uppercase">html</span>
                         <div class="progress w-100">
@@ -343,7 +389,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="skill_icon col-lg-8 mx-auto   d-flex text-capitalize fw-bold justify-content-center mt-5 text-center">
+                <ul class="skill_icon col-lg-8 mx-auto   d-flex text-capitalize fw-bold justify-content-center mt-5 text-center back-to-position delay-1">
                     <li class="d-flex flex-column justify-content-center">
                         <img src="./img/figma.svg" alt="Figma logo">
                         <span>Figma</span>
@@ -371,15 +417,15 @@
                 </ul>
             </div>
         </section>
-        <section id="contact" class="contact color-g">
+        <section id="contact" class="contact color-g scroll-spy">
             <div class="container section-p text-white">
-                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2 text-white">contact me</h2>
+                <h2 class="text-center text-uppercase mb-0 fw-bold fs-h2 text-white back-to-position">contact me</h2>
                 <div class="line d-flex justify-content-center align-items-center my-4">
                     <div class="division-line me-3 bg-light"></div>
                     <i class="bi bi-flower2 white"></i>
                     <div class="division-line ms-3 bg-light"></div>
                 </div>
-                <div class="row col-lg-8 mx-auto align-items-center address">
+                <div class="row col-lg-8 mx-auto align-items-center address back-to-position delay-0">
                     <div class="col-sm-4 mx-auto">
                         <p class="lead mb-0">
                             euns420@naver.com
